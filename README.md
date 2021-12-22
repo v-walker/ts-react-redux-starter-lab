@@ -47,8 +47,8 @@ Please visit the [Redux Style Guide](https://redux.js.org/style-guide/style-guid
 
 <br>
 
-## 5. Let's Bulid Your Own Slice and Update the Global Store
-- Within this application, you have the basic structure of a new feature for your application, but it doesn't work... yet!
+## 5. Let's Bulid Your Own Slice, Update the Global Store, and Make a Functioning Component
+- Within this application, you have the basic structure of a new feature ("TestFeature") for your application, but it doesn't work... yet!
 - Create your own logic for the testFeature ("Test Page" in the (VERY BASIC) navbar).
     - Refer to TestFeature.tsx for the goal of this feature: create logic that makes Santa's List work. You will need actions to add names to the list and delete names from the list. Also, consider how you can retrieve data from the global store to show the names you have added to the list.
         - Where can you implement this logic within this file?
