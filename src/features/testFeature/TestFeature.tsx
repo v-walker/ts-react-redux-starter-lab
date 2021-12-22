@@ -1,17 +1,10 @@
-import React, {useState, FormEvent } from 'react';
-import { useAppSelector, useAppDispatch } from '../../app/hooks';
-import { addName, removeName, selectNames } from './testFeatureSlice';
+import React from 'react';
 
 function TestFeature() {
-    const names = useAppSelector(selectNames);
-    const dispatch = useAppDispatch();
-    const [nameToAdd, setNameToAdd] = useState("")
 
-    const handleSubmitName = (event: FormEvent) => {
-        event.preventDefault();
-
-        dispatch(addName(nameToAdd));
-        setNameToAdd("");
+    // handleSubmitName takes in a parameter e (event) -- how could you type this parameter?
+    const handleSubmitName = () => {
+        
     }
     
     return (
@@ -23,9 +16,9 @@ function TestFeature() {
             </p>
             <br />
             <h2>Add a Name</h2>
-            <form className='left-align' onSubmit={handleSubmitName}>
+            <form className='left-align'>
                 <label htmlFor="name-input">Name</label>
-                <input id="name-input" value={nameToAdd} placeholder="Name" type="text" onChange={(e) => setNameToAdd(e.target.value)} />
+                <input id="name-input" placeholder="Name" type="text" />
                 <input className='waves-effect waves-light btn green' type="submit" />
             </form>
             
@@ -33,20 +26,10 @@ function TestFeature() {
             <br />
             <h2>Names You Have Added:</h2>
             <div className='left-align'>
-                <ul>
-                    {names.map(name => {
-                        return(
-                            <>
-                                <li><button className='waves-effect waves-light btn red' onClick={() => dispatch(removeName(name))}><b>X</b></button> &nbsp;{name}</li>
-                                <br />
-                            </>
-                            
-                        ) 
-                    })}
-                </ul>
+                {/* Add logic here to display names that have been added to the global state */}
             </div>
         </div>
     )
 }
 
-export default TestFeature
+export default TestFeature;
