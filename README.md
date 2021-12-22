@@ -4,11 +4,21 @@ Objective: Learn React and Redux using TypeScript and Redux Toolkit by familiari
 
 Please note that this activity assumes you have working knowledge of React and Redux with JavaScript. Please refer to the React and Redux documentation for more background/foundation in these areas if needed.
 
+This activity was scaffolded out using the [React/Redux TypeScript template](https://github.com/reduxjs/cra-template-redux-typescript). Please reference this documentation for more information about Create React App and the TypeScript template.
+
+Additional dependencies installed include:
+- [React Router](https://reactrouter.com/docs/en/v6/getting-started/installation)
+- [Redux-Persist](https://github.com/rt2zz/redux-persist#readme)
+- [Materialize CSS](https://materializecss.com/getting-started.html)
+- [React Materialize](http://react-materialize.github.io/react-materialize/?path=/story/react-materialize--welcome)
+
+Please refer to the documentation for these dependencies, as information on their use and implementation is not included in this activity.
+
 ---
 
 ## 1. Getting Started
 
-All dependencies necessary to complete this activity are included in the file package.json at the root of your directory. To make the application run locally, begin by inputting `npm install` in the terminal. Then start the application with `npm start`.
+Begin by cloning this repository on your command line using the command `git clone https://github.com/v-walker/ts-react-redux-starter-lab.git`. All dependencies necessary to complete this activity are included in the file "package.json" at the root of your directory. To make the application run locally, begin by inputting `npm install` in the terminal. Then start the application with `npm start`.
 
 <br>
 
