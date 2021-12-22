@@ -1,6 +1,6 @@
 # React Redux Starter Lab
 
-Objective: Learn React and Redux using TypeScript and Redux Toolkit by familiarizing yourself with the file structure, redux global store, features and pages as components, and utitlizing slices to update the global store.
+Objective: Learn React and Redux using TypeScript and [Redux Toolkit](https://redux-toolkit.js.org/usage/usage-with-typescript) by familiarizing yourself with the file structure, redux global store, features and pages as components, and utitlizing slices to update the global store.
 
 Please note that this activity assumes you have working knowledge of React and Redux with JavaScript. Please refer to the React and Redux documentation for more background/foundation in these areas if needed.
 
@@ -24,7 +24,7 @@ Begin by cloning this repository on your command line using the command `git clo
 
 ## 2. Understand the file structure
 
-With Redux Toolkit, you can utilize createSlice() to manage your reducers and action creators. This necessitates a different file structure than what we have used previously. 
+With [Redux Toolkit](https://redux-toolkit.js.org/usage/usage-with-typescript), you can utilize createSlice() to manage your reducers and action creators. This necessitates a different file structure than what we have used previously. 
 
 Example Directory for this activity:
 ![file structure](./public/images/react-redux-file-structure.png)
