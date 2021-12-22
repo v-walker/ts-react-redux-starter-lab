@@ -3,6 +3,7 @@ import React from 'react';
 function TestFeature() {
 
     // handleSubmitName takes in a parameter e (event) -- how could you type this parameter?
+    // where should you implement this function within the existing code structure?
     const handleSubmitName = () => {
         
     }
@@ -27,6 +28,7 @@ function TestFeature() {
             <h2>Names You Have Added:</h2>
             <div className='left-align'>
                 {/* Add logic here to display names that have been added to the global state */}
+                {/* Add logic to delete names from this list */}
             </div>
         </div>
     )
