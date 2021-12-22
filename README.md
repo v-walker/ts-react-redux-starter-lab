@@ -1,44 +1,54 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# React Redux Starter Lab
 
-## Available Scripts
+Objective: Learn React and Redux using TypeScript and Redux Toolkit by familiarizing yourself with the file structure, redux global store, features and pages as components, and utitlizing slices to update the global store.
 
-In the project directory, you can run:
+Please note that this activity assumes you have working knowledge of React and Redux with JavaScript. Please refer to the React and Redux documentation for more background/foundation in these areas if needed.
 
-### `npm start`
+---
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 1. Getting Started
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+All dependencies necessary to complete this activity are included in the file package.json at the root of your directory. To make the application run locally, begin by inputting `npm install` in the terminal. Then start the application with `npm start`.
 
-### `npm test`
+<br>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 2. Understand the file structure
 
-### `npm run build`
+With Redux Toolkit, you can utilize createSlice() to manage your reducers and action creators. This necessitates a different file structure than what we have used previously. 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Example Directory for this activity:
+![file structure](./public/images/react-redux-file-structure.png)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Please visit the [Redux Style Guide](https://redux.js.org/style-guide/style-guide#structure-files-as-feature-folders-with-single-file-logic) for more information/discussion regarding this file structure. We have a few more folders here than are included in the style guide for organiztion purposes.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br>
 
-### `npm run eject`
+## 3. Global Store
+- Based on the file structure noted above, navigate to store.ts.
+- Here we have already configured for you the global state (combined reducer) along with persisted state for local storage. Typing for compatability with TS has also been included here. 
+- Consider: how might you access "count" from the global store? Note: you'll need to look at the counterReducer located in ./src/features/counter/counterSlice.ts to better understand how this reducer is structured.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<br>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 4. What the Heck is a Slice?
+- Slices allow you to manage state and action types all in one! Brilliant, isn't it?
+- Read more about their usage with TypeScript here: [Redux Usage with TypeScript: Application Usage](https://redux.js.org/style-guide/style-guide#structure-files-as-feature-folders-with-single-file-logic)
+- Refer to ./src/features/counter/counterSlice.ts for a working example. This example includes logic for updating the counter state using thunks, slice actions, and extra actions using "builder." Please make note the the comments included in this file, as they will help you to better understand the function and of each action type.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<br>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 5. Let's Bulid Your Own Slice and Update the Global Store
+- Within this application, you have the basic structure of a new feature for your application, but it doesn't work... yet!
+- Create your own logic for the testFeature.
+    - Begin by creating a new slice for testFeature in ./src/features/testFeature
+        - you can call this testFeatureSlice.ts
+        - remember, you will need to create an initial state and actions to update the state
+        - you will not need thunks or builder to implement these basic actions
+    - Add a new piece of state to the combined reducer (located in ./src/app/store.ts)
+    - Refer to TestFeature.tsx for the goal of this feature: create logic that makes Santa's List work. You will need actions to add names to the list and delete names from the list. Also, consider how you can retrieve data from the global store to show the names you have added to the list.
+        - Where can you implement this logic within this file?
+        - Refer back to Counter.tsx and counterSlice.ts for examples of implementation
 
-## Learn More
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+A working example of this activity can be found here if you get stuck!: [ts-react-redux-starter-demo](https://github.com/v-walker/ts-react-redux-starter-demo/blob/main/src/features/testFeature/TestFeature.tsx)
